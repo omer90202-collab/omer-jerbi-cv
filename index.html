@@ -13,11 +13,21 @@
 </head>
 <body>
 
+    <!-- Background grid -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
     <!-- Top Bar -->
     <header class="top-bar">
         <div class="top-bar__inner">
-            <span class="top-bar__brand">OJ</span>
-            <span class="top-bar__edition">גיליון 01 · קורות חיים · 2026</span>
+            <span class="top-bar__brand">
+                <span class="top-bar__brand-mark">OJ</span>
+                <span class="top-bar__brand-text">עומר ג'רבי</span>
+            </span>
+            <span class="top-bar__live">
+                <span class="live-dot"></span>
+                <span>LIVE · גיליון 2026</span>
+            </span>
             <a href="#contact" class="top-bar__cta">צרו קשר</a>
         </div>
     </header>
@@ -28,17 +38,34 @@
             <div class="hero__type">
                 <div class="hero__kicker">
                     <span class="dot"></span>
-                    <span>פורטפוליו אישי</span>
+                    <span>פורטפוליו אישי · 01</span>
                 </div>
+
                 <h1 class="hero__title">
                     <span class="hero__title-line">עומר</span>
                     <span class="hero__title-line hero__title-line--accent">ג'רבי</span>
                 </h1>
+
+                <div class="hero__rotator" aria-label="מקצועות">
+                    <span class="hero__rotator-prefix">אני</span>
+                    <span class="hero__rotator-stage">
+                        <span class="hero__rotator-word is-active">מעצב גרפי</span>
+                        <span class="hero__rotator-word">עורך וידיאו</span>
+                        <span class="hero__rotator-word">עורך פודקאסטים</span>
+                        <span class="hero__rotator-word">יוצר תוכן AI</span>
+                        <span class="hero__rotator-word">שיווק דיגיטלי</span>
+                        <span class="hero__rotator-word">בונה אתרים</span>
+                        <span class="hero__rotator-word">יזם</span>
+                    </span>
+                </div>
+
                 <p class="hero__lede">
-                    מעצב גרפי, עורך וידיאו ופודקאסטים, יוצר תוכן בבינה מלאכותית.
+                    בן 23, בוגר שנקר.
                     <br>
-                    בדרך להגשמת חלום — להיות שדרן ספורט.
+                    בדרך להגשמת החלום הגדול —
+                    <span class="hero__lede-mark">להיות שדרן ספורט.</span>
                 </p>
+
                 <div class="hero__meta">
                     <div class="hero__meta-item">
                         <span class="hero__meta-label">מבוסס</span>
@@ -46,13 +73,13 @@
                     </div>
                     <div class="hero__meta-divider"></div>
                     <div class="hero__meta-item">
-                        <span class="hero__meta-label">גיל</span>
-                        <span class="hero__meta-value">23</span>
+                        <span class="hero__meta-label">סטטוס</span>
+                        <span class="hero__meta-value hero__meta-value--accent">פנוי להזדמנויות</span>
                     </div>
                     <div class="hero__meta-divider"></div>
                     <div class="hero__meta-item">
-                        <span class="hero__meta-label">סטטוס</span>
-                        <span class="hero__meta-value">פנוי להזדמנויות</span>
+                        <span class="hero__meta-label">שנת לידה</span>
+                        <span class="hero__meta-value">2002</span>
                     </div>
                 </div>
             </div>
@@ -60,40 +87,94 @@
             <div class="hero__portrait">
                 <div class="hero__portrait-frame">
                     <img src="assets/images/omer.png" alt="עומר ג'רבי" class="hero__portrait-img">
-                    <div class="hero__portrait-tag">
-                        <span>עומר ג'רבי</span>
-                        <span class="hero__portrait-tag-year">'26</span>
-                    </div>
+                    <div class="hero__portrait-noise"></div>
                 </div>
+                <div class="hero__portrait-tag">
+                    <span class="hero__portrait-tag-line">// עומר ג'רבי</span>
+                    <span class="hero__portrait-tag-line">// CV · 2026</span>
+                </div>
+                <div class="hero__portrait-corner hero__portrait-corner--tl"></div>
+                <div class="hero__portrait-corner hero__portrait-corner--tr"></div>
+                <div class="hero__portrait-corner hero__portrait-corner--bl"></div>
+                <div class="hero__portrait-corner hero__portrait-corner--br"></div>
             </div>
         </div>
 
         <div class="hero__scroll">
-            <span>גלילה</span>
+            <span>גלילה למטה</span>
             <span class="hero__scroll-line"></span>
         </div>
     </section>
+
+    <!-- STATS STRIP -->
+    <section class="stats">
+        <div class="stats__grid">
+            <div class="stat">
+                <span class="stat__num" data-count="1300">1,300+</span>
+                <span class="stat__label">חיילים הוכשרו תחתיי בצה"ל</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num" data-count="5">5</span>
+                <span class="stat__label">אתרי SaaS בבנייה</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num" data-count="20">20+</span>
+                <span class="stat__label">כלי בינה מלאכותית בשליטה</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num">∞</span>
+                <span class="stat__label">רצון להגיע למקום הראשון</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span class="marquee__item">פרסומות לטלוויזיה</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">אייל גולן</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">האח הגדול</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">הישרדות</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">״אם תרצו״</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">5 אתרי SaaS</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">עיצוב גרפי</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">עריכת פודקאסטים</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">תוכן AI</span><span class="marquee__dot">●</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marquee__item">פרסומות לטלוויזיה</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">אייל גולן</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">האח הגדול</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">הישרדות</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">״אם תרצו״</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">5 אתרי SaaS</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">עיצוב גרפי</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">עריכת פודקאסטים</span><span class="marquee__dot">●</span>
+            <span class="marquee__item">תוכן AI</span><span class="marquee__dot">●</span>
+        </div>
+    </div>
 
     <!-- ABOUT -->
     <section class="about section" id="about">
         <div class="section__head">
             <span class="section__num">01</span>
             <span class="section__label">קצת עליי</span>
+            <span class="section__line"></span>
         </div>
         <div class="about__body">
             <p class="about__pullquote">
-                בן 23, בוגר שנקר בעיצוב גרפי יישומי.
+                בוגר שנקר.<br>
+                <span class="about__pullquote-accent">בדרך לשדרנות ספורט.</span>
             </p>
             <p class="about__text">
                 עוסק בעיצוב גרפי, עריכת וידיאו ופודקאסטים מקצועית,
                 יצירת תוכן ויזואלי מבוסס בינה מלאכותית — סרטוני תדמית, פרסומות ותמונות,
-                שיווק דיגיטלי, בנייה ועיצוב אתרים ובניית מערכות ואוטומציות מבוססות בינה מלאכותית.
+                שיווק דיגיטלי, בנייה ועיצוב אתרים, ובניית מערכות ואוטומציות מבוססות בינה מלאכותית.
             </p>
-            <p class="about__dream">
+            <div class="about__dream">
                 <span class="about__dream-mark">״</span>
-                החלום שלי — להיות שדרן ספורט. אני מחפש את דריסת הרגל הראשונה בעולם התקשורת והספורט.
-                <span class="about__dream-mark">״</span>
-            </p>
+                <p>החלום שלי — להיות שדרן ספורט. אני מחפש את דריסת הרגל הראשונה בעולם התקשורת והספורט.</p>
+                <span class="about__dream-mark about__dream-mark--end">״</span>
+            </div>
         </div>
     </section>
 
@@ -102,14 +183,16 @@
         <div class="section__head">
             <span class="section__num">02</span>
             <span class="section__label">ניסיון תעסוקתי</span>
+            <span class="section__line"></span>
         </div>
 
         <div class="timeline">
             <article class="timeline__item timeline__item--current">
                 <div class="timeline__year">
-                    <span>2023</span>
+                    <span class="timeline__year-num">2023</span>
                     <span class="timeline__year-divider">—</span>
-                    <span>היום</span>
+                    <span class="timeline__year-num">היום</span>
+                    <span class="timeline__badge">נוכחי</span>
                 </div>
                 <div class="timeline__content">
                     <h3 class="timeline__role">יזם עצמאי</h3>
@@ -133,9 +216,9 @@
 
             <article class="timeline__item">
                 <div class="timeline__year">
-                    <span>2020</span>
+                    <span class="timeline__year-num">2020</span>
                     <span class="timeline__year-divider">—</span>
-                    <span>2022</span>
+                    <span class="timeline__year-num">2022</span>
                 </div>
                 <div class="timeline__content">
                     <h3 class="timeline__role">מנהל צוותי יח״צ ומכירות · קשרי תעופה</h3>
@@ -147,9 +230,9 @@
 
             <article class="timeline__item">
                 <div class="timeline__year">
-                    <span>2018</span>
+                    <span class="timeline__year-num">2018</span>
                     <span class="timeline__year-divider">—</span>
-                    <span>2022</span>
+                    <span class="timeline__year-num">2022</span>
                 </div>
                 <div class="timeline__content">
                     <h3 class="timeline__role">מנהל צוותי יח״צ ומכירות · הפקות אירועים</h3>
@@ -166,6 +249,7 @@
         <div class="section__head">
             <span class="section__num">03</span>
             <span class="section__label">שירות צבאי</span>
+            <span class="section__line"></span>
         </div>
 
         <div class="military__grid">
@@ -185,16 +269,16 @@
             </div>
 
             <div class="military__roles">
-                <article class="role-card">
+                <article class="role-card role-card--big">
                     <span class="role-card__num">תפקיד I</span>
-                    <h3 class="role-card__title">מפקד ומדריך בקורס מכונאות ונהיגה</h3>
+                    <h3 class="role-card__title">מפקד ומדריך · קורס מכונאות ונהיגה רק"מ</h3>
                     <p class="role-card__desc">
                         מפקד ומדריך בקורס מכונאות ונהיגה על כל כלי הרק״מ בצה״ל.
                         במהלך תפקידי הוכשרו תחתי כ-1,300 מכונאים ונהגים בצה״ל.
                     </p>
                     <div class="role-card__stat">
                         <span class="role-card__stat-num">1,300+</span>
-                        <span class="role-card__stat-label">חיילים הוכשרו תחתיי</span>
+                        <span class="role-card__stat-label">חיילים<br>הוכשרו תחתיי</span>
                     </div>
                 </article>
 
@@ -215,13 +299,16 @@
         <div class="section__head">
             <span class="section__num">04</span>
             <span class="section__label">השכלה</span>
+            <span class="section__line"></span>
         </div>
         <div class="education__list">
             <article class="edu-item">
+                <span class="edu-item__num">01</span>
                 <h3 class="edu-item__title">בוגר עיצוב גרפי יישומי</h3>
                 <p class="edu-item__org">מכללת שנקר הנדסאים</p>
             </article>
             <article class="edu-item">
+                <span class="edu-item__num">02</span>
                 <h3 class="edu-item__title">בגרות מלאה + תעודה טכנולוגית</h3>
                 <p class="edu-item__org">מגמת מכטרוניקה</p>
             </article>
@@ -233,11 +320,12 @@
         <div class="section__head">
             <span class="section__num">05</span>
             <span class="section__label">כישורים ושפות</span>
+            <span class="section__line"></span>
         </div>
 
         <div class="skills__grid">
             <div class="skill-block">
-                <h3 class="skill-block__title">שפות</h3>
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> שפות</h3>
                 <ul class="skill-block__list">
                     <li><span class="skill-block__name">עברית</span><span class="skill-block__level">שפת אם</span></li>
                     <li><span class="skill-block__name">אנגלית</span><span class="skill-block__level">טובה מאוד</span></li>
@@ -246,7 +334,7 @@
             </div>
 
             <div class="skill-block">
-                <h3 class="skill-block__title">Adobe</h3>
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> Adobe</h3>
                 <div class="tag-cloud">
                     <span class="tag">Photoshop</span>
                     <span class="tag">Illustrator</span>
@@ -256,8 +344,8 @@
                 </div>
             </div>
 
-            <div class="skill-block">
-                <h3 class="skill-block__title">בינה מלאכותית · יצירת תוכן</h3>
+            <div class="skill-block skill-block--wide">
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> בינה מלאכותית · יצירת תוכן</h3>
                 <div class="tag-cloud">
                     <span class="tag">Midjourney</span>
                     <span class="tag">Kling</span>
@@ -275,7 +363,7 @@
             </div>
 
             <div class="skill-block">
-                <h3 class="skill-block__title">מודלי שפה</h3>
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> מודלי שפה</h3>
                 <div class="tag-cloud">
                     <span class="tag">Claude</span>
                     <span class="tag">GPT</span>
@@ -284,7 +372,7 @@
             </div>
 
             <div class="skill-block">
-                <h3 class="skill-block__title">אתרים · מערכות · אוטומציות</h3>
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> אתרים · אוטומציות</h3>
                 <div class="tag-cloud">
                     <span class="tag">Lovable</span>
                     <span class="tag">Make</span>
@@ -297,8 +385,8 @@
             </div>
 
             <div class="skill-block">
-                <h3 class="skill-block__title">נוסף</h3>
-                <ul class="skill-block__list skill-block__list--mini">
+                <h3 class="skill-block__title"><span class="skill-block__bullet">◆</span> נוסף</h3>
+                <ul class="skill-block__list">
                     <li><span class="skill-block__name">Office</span><span class="skill-block__level">שליטה מלאה</span></li>
                     <li><span class="skill-block__name">רישיון נהיגה</span><span class="skill-block__level">B + A1</span></li>
                 </ul>
@@ -311,25 +399,25 @@
         <div class="contact__inner">
             <span class="contact__kicker">סוף המסע · התחלת השיחה</span>
             <h2 class="contact__title">
-                בואו ניצור<br>משהו ביחד.
+                בואו ניצור<br>משהו <span class="contact__title-accent">ביחד.</span>
             </h2>
             <p class="contact__sub">
                 לכל הזדמנות בעולם הספורט והתקשורת — אני זמין, רעב ומוכן ללכת עד הסוף.
             </p>
 
             <div class="contact__buttons">
-                <a href="https://wa.me/972542131252?text=%D7%94%D7%99%20%D7%A2%D7%95%D7%9E%D7%A8%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A" target="_blank" rel="noopener" class="cta-btn cta-btn--whatsapp">
+                <a href="https://wa.me/972542131252?text=%D7%94%D7%99%20%D7%A2%D7%95%D7%9E%D7%A8%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A" target="_blank" rel="noopener" class="cta-btn">
                     <span class="cta-btn__icon">
                         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
                     </span>
                     <span class="cta-btn__text">
-                        <span class="cta-btn__label">WhatsApp</span>
+                        <span class="cta-btn__label">WhatsApp · הכי מהיר</span>
                         <span class="cta-btn__value">054-2131252</span>
                     </span>
                     <span class="cta-btn__arrow">←</span>
                 </a>
 
-                <a href="mailto:omer90202@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8" class="cta-btn cta-btn--email">
+                <a href="mailto:omer90202@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8" class="cta-btn">
                     <span class="cta-btn__icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
                     </span>
@@ -340,7 +428,7 @@
                     <span class="cta-btn__arrow">←</span>
                 </a>
 
-                <a href="tel:+972542131252" class="cta-btn cta-btn--phone">
+                <a href="tel:+972542131252" class="cta-btn">
                     <span class="cta-btn__icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </span>
@@ -357,9 +445,9 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__inner">
-            <span>עומר ג'רבי · 2026</span>
-            <span class="footer__center">עוצב ונבנה בידיים שלי</span>
-            <span>End of issue.</span>
+            <span class="footer__brand">© עומר ג'רבי · 2026</span>
+            <span class="footer__center">עוצב, נבנה ונפרס בידיים שלי</span>
+            <span class="footer__end">END · OF · ISSUE</span>
         </div>
     </footer>
 
